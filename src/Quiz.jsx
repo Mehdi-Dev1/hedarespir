@@ -5,409 +5,455 @@ const questionsData = [
     "id": 1,
     "question": "Quelle est la principale fonction des reins?",
     "options": [
-      "Filtrer le sang",
-      "Combattre les infections",
-      "Produire des globules rouges",
-      "Éliminer les déchets liquides du corps"
+        "Filtrer le sang",
+        "Combattre les infections",
+        "Produire des globules rouges",
+        "Éliminer les déchets liquides du corps"
     ],
     "answer": "Filtrer le sang"
-  },
-  {
+},
+{
     "id": 2,
-    "question": "Qu'est-ce que la thrombopénie?",
+    "question": "Quel est le rôle principal des globules rouges?",
     "options": [
-      "Augmentation du nombre de globules blancs",
-      "Diminution du nombre de plaquettes",
-      "Diminution du volume sanguin",
-      "Épaississement du sang"
+        "Transporter l'oxygène",
+        "Combattre les infections",
+        "Réguler la glycémie",
+        "Filtrer les déchets"
     ],
-    "answer": "Diminution du nombre de plaquettes"
-  },
-  {
+    "answer": "Transporter l'oxygène"
+},
+{
     "id": 3,
-    "question": "Quels sont les risques associés à une thrombopénie sévère pendant la grossesse?",
+    "question": "Qu'est-ce que l'hémoglobine?",
     "options": [
-      "Insuffisance rénale",
-      "Augmentation de la pression artérielle",
-      "Risque hémorragique",
-      "Diabète gestationnel"
+        "Une protéine qui transporte l'oxygène dans le sang",
+        "Un type de globule blanc",
+        "Un anticorps",
+        "Un enzyme digestif"
     ],
-    "answer": "Risque hémorragique"
-  },
-  {
+    "answer": "Une protéine qui transporte l'oxygène dans le sang"
+},
+{
     "id": 4,
-    "question": "Quel est le rôle des plaquettes dans la coagulation?",
+    "question": "Quel est le rôle des plaquettes dans le sang?",
     "options": [
-      "Transport de l'oxygène",
-      "Formation du clou plaquettaire",
-      "Production d'anticorps",
-      "Filtration des déchets"
+        "Participer à la coagulation",
+        "Transporter le dioxyde de carbone",
+        "Combattre les infections",
+        "Réguler la température corporelle"
     ],
-    "answer": "Formation du clou plaquettaire"
-  },
-  {
+    "answer": "Participer à la coagulation"
+},
+{
     "id": 5,
-    "question": "Qu'est-ce que l'hémostase primaire?",
+    "question": "Où se fait l'échange gazeux dans le corps?",
     "options": [
-      "La formation du clou plaquettaire",
-      "La filtration des reins",
-      "La production de globules rouges",
-      "La respiration cellulaire"
+        "Dans les poumons",
+        "Dans les reins",
+        "Dans le cœur",
+        "Dans le foie"
     ],
-    "answer": "La formation du clou plaquettaire"
-  },
-  {
+    "answer": "Dans les poumons"
+},
+{
     "id": 6,
-    "question": "Quelle protéine est responsable de la formation du caillot de fibrine?",
+    "question": "Quelle est la fonction principale des veines?",
     "options": [
-      "La myoglobine",
-      "L'albumine",
-      "La fibrinogène",
-      "L'hémoglobine"
+        "Ramener le sang vers le cœur",
+        "Pomper le sang vers les organes",
+        "Produire des globules blancs",
+        "Éliminer les toxines du sang"
     ],
-    "answer": "La fibrinogène"
-  },
-  {
+    "answer": "Ramener le sang vers le cœur"
+},
+{
     "id": 7,
-    "question": "Quand survient généralement la thrombopénie physiologique pendant la grossesse?",
+    "question": "Qu'est-ce que la volémie?",
     "options": [
-      "Au troisième trimestre",
-      "Après l'accouchement",
-      "Au premier trimestre",
-      "Au deuxième trimestre"
+        "Le volume total de sang dans le corps",
+        "La pression artérielle",
+        "La vitesse du flux sanguin",
+        "La quantité de globules rouges"
     ],
-    "answer": "Au troisième trimestre"
-  },
-  {
+    "answer": "Le volume total de sang dans le corps"
+},
+{
     "id": 8,
-    "question": "Quels facteurs augmentent pendant la grossesse pour préparer l'accouchement?",
+    "question": "Quelle est la principale artère du corps?",
     "options": [
-      "Les niveaux de glucose",
-      "Les globules blancs",
-      "Les facteurs de coagulation",
-      "Les niveaux de calcium"
+        "L'aorte",
+        "La veine cave",
+        "L'artère pulmonaire",
+        "L'artère coronaire"
     ],
-    "answer": "Les facteurs de coagulation"
-  },
-  {
+    "answer": "L'aorte"
+},
+{
     "id": 9,
-    "question": "Quelle est la conséquence principale de l'activation des plaquettes?",
+    "question": "Quelle est la fonction principale des capillaires?",
     "options": [
-      "Formation du clou plaquettaire",
-      "Destruction des globules rouges",
-      "Filtration des déchets par les reins",
-      "Production d'anticorps"
+        "Permettre les échanges entre le sang et les tissus",
+        "Transporter le sang vers les poumons",
+        "Filtrer le sang",
+        "Stocker le glucose"
     ],
-    "answer": "Formation du clou plaquettaire"
-  },
-  {
+    "answer": "Permettre les échanges entre le sang et les tissus"
+},
+{
     "id": 10,
-    "question": "Quel est le principal risque associé à une hypofibrinolyse pendant la grossesse?",
+    "question": "Quelle hormone est responsable de la régulation du glucose dans le sang?",
     "options": [
-      "Thrombose",
-      "Diabète",
+        "Insuline",
+        "Thyroxine",
+        "Cortisol",
+        "Adrénaline"
+    ],
+    "answer": "Insuline"
+},
+{
+  "id": 11,
+  "question": "Quelle est la principale cause des œdèmes chez les femmes enceintes?",
+  "options": [
+      "Diminution de la pression artérielle",
+      "Augmentation du volume sanguin",
+      "Diminution du débit cardiaque",
+      "Augmentation de la consommation d'oxygène"
+  ],
+  "answer": "Augmentation du volume sanguin"
+},
+{
+  "id": 12,
+  "question": "Quelle est la cause principale de la thrombopénie pendant la grossesse?",
+  "options": [
+      "Augmentation de la pression veineuse",
+      "Diminution du nombre de plaquettes",
+      "Hypertension artérielle",
+      "Compression de la veine cave"
+  ],
+  "answer": "Diminution du nombre de plaquettes"
+},
+{
+  "id": 13,
+  "question": "Pourquoi le cœur s'hypertrophie-t-il pendant la grossesse?",
+  "options": [
+      "Pour compenser une hypertension",
+      "Pour augmenter la capacité de pompage",
+      "Pour réduire le volume sanguin",
+      "Pour diminuer le débit cardiaque"
+  ],
+  "answer": "Pour augmenter la capacité de pompage"
+},
+{
+  "id": 14,
+  "question": "Quel est le symptôme principal du syndrome aorto-cave?",
+  "options": [
+      "Hypertension artérielle",
+      "Hypotension maternelle",
+      "Augmentation du débit cardiaque",
+      "Réduction de la fréquence cardiaque"
+  ],
+  "answer": "Hypotension maternelle"
+},
+{
+  "id": 15,
+  "question": "Quel est le rôle principal du ventricule gauche?",
+  "options": [
+      "Filtrer les déchets",
+      "Recueillir le sang des poumons",
+      "Expulser le sang vers le corps",
+      "Produire des globules rouges"
+  ],
+  "answer": "Expulser le sang vers le corps"
+},
+{
+  "id": 16,
+  "question": "Quel phénomène explique l'hypertrophie ventriculaire gauche pendant la grossesse?",
+  "options": [
+      "Réduction du volume plasmatique",
+      "Diminution de la fréquence cardiaque",
+      "Augmentation du débit cardiaque",
+      "Augmentation de la pression veineuse"
+  ],
+  "answer": "Augmentation du débit cardiaque"
+},
+{
+  "id": 17,
+  "question": "Pourquoi les femmes enceintes sont-elles plus sujettes aux varices?",
+  "options": [
+      "Hyperglycémie",
+      "Hypotension",
+      "Hyperpression veineuse",
+      "Diminution du volume sanguin"
+  ],
+  "answer": "Hyperpression veineuse"
+},
+{
+  "id": 18,
+  "question": "Quelle est la conséquence principale de la compression de la veine cave inférieure?",
+  "options": [
+      "Augmentation du débit sanguin",
+      "Augmentation du volume sanguin",
+      "Diminution du débit cardiaque",
+      "Réduction du retour veineux"
+  ],
+  "answer": "Réduction du retour veineux"
+},
+{
+  "id": 19,
+  "question": "Quel est l'effet principal de l'hémodilution pendant la grossesse?",
+  "options": [
+      "Hyperglycémie",
+      "Anémie physiologique",
+      "Hypertension",
+      "Hypoxie"
+  ],
+  "answer": "Anémie physiologique"
+},
+{
+  "id": 20,
+  "question": "Quelle est la cause principale de la diminution de la tension artérielle au cours de la grossesse?",
+  "options": [
+      "Hyperglycémie",
+      "Hypoglycémie",
+      "Vasodilatation",
+      "Augmentation du débit cardiaque"
+  ],
+  "answer": "Vasodilatation"
+},     
+{
+
+  "id": 20,
+  "question": "Quelle est la cause principale de la diminution de la tension artérielle au cours de la grossesse?",
+  "options": [
+      "Vasodilatation",
+      "Hypoglycémie",
+      "Hyperglycémie",
+      "Augmentation du débit cardiaque"
+  ],
+  "answer": "Vasodilatation"
+},
+{
+  "id": 21,
+  "question": "Comment se manifeste le syndrome aorto-cave?",
+  "options": [
+      "Hypotension maternelle",
+      "Hyperglycémie",
       "Anémie",
-      "Hypertension"
-    ],
-    "answer": "Thrombose"
-  },
-  {
-    "id": 11,
-    "question": "Quelle est la principale cause de l'hypercoagulabilité physiologique pendant la grossesse?",
-    "options": [
-      "Changements hormonaux",
-      "Augmentation des facteurs de coagulation",
-      "Élévation de la température corporelle",
-      "Diminution des plaquettes"
-    ],
-    "answer": "Augmentation des facteurs de coagulation"
-  },
-  {
-    "id": 12,
-    "question": "Quel est le rôle des D-dimères dans la coagulation?",
-    "options": [
-      "Indicateur de formation d'un caillot",
-      "Réduction des niveaux de glucose",
-      "Régulation de la température",
-      "Transport de l'oxygène"
-    ],
-    "answer": "Indicateur de formation d'un caillot"
-  },
-  {
-    "id": 13,
-    "question": "Quels changements hormonaux influencent l'hyperlaxité articulaire pendant la grossesse?",
-    "options": [
-      "L'adrénaline et la noradrénaline",
-      "La relaxine et les oestrogènes",
-      "L'insuline et le glucagon",
-      "La thyroxine et la calcitonine"
-    ],
-    "answer": "La relaxine et les oestrogènes"
-  },
-  {
-    "id": 14,
-    "question": "Quels sont les principaux risques de la coagulation excessive pendant la grossesse?",
-    "options": [
-      "Thrombose et embolie pulmonaire",
-      "Diabète et hypertension",
-      "Anémie et malnutrition",
-      "Insuffisance rénale"
-    ],
-    "answer": "Thrombose et embolie pulmonaire"
-  },
-  {
-    "id": 15,
-    "question": "Quelle est la cause principale de l'hypercoagulabilité pendant la grossesse?",
-    "options": [
-      "Augmentation de la pression sanguine",
-      "Augmentation des facteurs de coagulation",
-      "Changements dans le métabolisme du glucose",
-      "Diminution des globules rouges"
-    ],
-    "answer": "Augmentation des facteurs de coagulation"
-  },
-  {
-    "id": 16,
-    "question": "Quel est l'effet de la fibrinolyse sur un caillot de fibrine?",
-    "options": [
-      "Dissolution du caillot",
-      "Renforcement du caillot",
-      "Création d'un nouveau caillot",
+      "Tachycardie"
+  ],
+  "answer": "Hypotension maternelle"
+},
+{
+  "id": 22,
+  "question": "Quelle est la fonction principale du volume d'éjection systolique (VES)?",
+  "options": [
+      "Volume de sang éjecté par contraction",
+      "Transporter l'oxygène",
+      "Réguler la glycémie",
+      "Volume de sang éjecté par contraction"
+  ],
+  "answer": "Éliminer les toxines"
+},
+{
+  "id": 23,
+  "question": "Quel est le risque associé à une thrombopénie sévère?",
+  "options": [
+      "Hyperglycémie",
+      "Risque hémorragique",
+      "Hypotension",
+      "Insuffisance cardiaque"
+  ],
+  "answer": "Risque hémorragique"
+},
+{
+  "id": 24,
+  "question": "Qu'est-ce qui caractérise une hyperleucocytose physiologique pendant la grossesse?",
+  "options": [
+      "Hypotension",
+      "Diminution des globules rouges",
+      "Anémie",
+      "Augmentation des globules blancs"
+  ],
+  "answer": "Augmentation des globules blancs"
+},
+{
+  "id": 25,
+  "question": "Quel est le principal facteur contribuant à l'augmentation du volume sanguin pendant la grossesse?",
+  "options": [
+      "Hyperglycémie",
+      "Augmentation du plasma",
+      "Diminution des globules rouges",
+      "Diminution de la tension artérielle"
+  ],
+  "answer": "Augmentation du plasma"
+},
+{
+  "id": 26,
+  "question": "Qu'est-ce qui caractérise l'hypervolémie pendant la grossesse?",
+  "options": [
+      "Augmentation de la fréquence cardiaque",
+      "Réduction du débit cardiaque",
+      "Augmentation du volume plasmatique",
+      "Réduction du volume plasmatique"
+  ],
+  "answer": "Augmentation du volume plasmatique"
+},
+{
+  "id": 27,
+  "question": "Quelle est la principale cause de la diminution de la résistance vasculaire pendant la grossesse?",
+  "options": [
+      "Réduction du retour veineux",
+      "Hypotension",
+      "Augmentation du volume sanguin",
+      "Vasodilatation"
+  ],
+  "answer": "Vasodilatation"
+},
+{
+  "id": 28,
+  "question": "Quel est l'effet principal de l'augmentation du débit cardiaque pendant la grossesse?",
+  "options": [
+      "Hypertrophie du cœur",
+      "Réduction du volume plasmatique",
+      "Augmentation de la résistance vasculaire",
+      "Hypotension"
+  ],
+  "answer": "Hypertrophie du cœur"
+},
+{
+  "id": 29,
+  "question": "Pourquoi l'anémie est-elle fréquente pendant la grossesse?",
+  "options": [
+      "Hémodilution",
+      "Hyperglycémie",
+      "Réduction du débit cardiaque",
       "Augmentation du volume sanguin"
-    ],
-    "answer": "Dissolution du caillot"
-  },
-  {
-    "id": 17,
-    "question": "Quels sont les symptômes courants du syndrome du canal carpien pendant la grossesse?",
-    "options": [
-      "Engourdissement et fourmillements dans les doigts",
-      "Essoufflement",
-      "Douleur au dos",
-      "Crampes dans les jambes"
-    ],
-    "answer": "Engourdissement et fourmillements dans les doigts"
-  },
-  {
-    "id": 18,
-    "question": "Quels sont les facteurs de risque de l'hypercoagulabilité pendant la grossesse?",
-    "options": [
-      "BMI > 30, tabagisme, antécédents de TVP",
-      "Hypertension, diabète, varices",
-      "Diminution de l'activité physique, stress, sédentarité",
-      "Anémie, manque de sommeil, carence en vitamine D"
-    ],
-    "answer": "BMI > 30, tabagisme, antécédents de TVP"
-  },
-  {
-    "id": 19,
-    "question": "Quelles sont les conséquences mécaniques des modifications du système locomoteur pendant la grossesse?",
-    "options": [
-      "Lombalgies, pubalgies, crampes des mollets",
-      "Perte d'appétit, nausées, vomissements",
-      "Hypertension, diabète, thrombose",
-      "Insomnie, somnolence, fatigue"
-    ],
-    "answer": "Lombalgies, pubalgies, crampes des mollets"
-  },
-  {
-    "id": 20,
-    "question": "Quelles sont les recommandations pour prévenir les complications liées à la thrombopénie pendant la grossesse?",
-    "options": [
-      "Prise de vitamines",
-      "Surveillance régulière des plaquettes",
-      "Augmentation de la consommation de fer",
-      "Repos au lit"
-    ],
-    "answer": "Surveillance régulière des plaquettes"
-  },
-  {
-    "id": 21,
-    "question": "Quelles sont les modifications des glandes sudoripares pendant la grossesse?",
-    "options": [
-      "Augmentation de la transpiration",
-      "Réduction de la production de sueur",
-      "Aucun changement",
-      "Changement de la composition de la sueur"
-    ],
-    "answer": "Augmentation de la transpiration"
-  },
-  {
-    "id": 22,
-    "question": "Quel est l'effet des vomissements fréquents sur les dents pendant la grossesse?",
-    "options": [
-      "Érosion dentaire due à l'acidité",
-      "Augmentation de la production de salive",
-      "Raffermissement des dents",
-      "Réduction de l'acidité buccale"
-    ],
-    "answer": "Érosion dentaire due à l'acidité"
-  },
-  {
-    "id": 23,
-    "question": "Quel est le principal symptôme d'une mycose vaginale pendant la grossesse?",
-    "options": [
-      "Douleur abdominale",
-      "Saignements vaginaux",
-      "Pertes vaginales blanches et épaisses",
-      "Fièvre"
-    ],
-    "answer": "Pertes vaginales blanches et épaisses"
-  },
-  {
-    "id": 24,
-    "question": "Quels sont les principaux symptômes de la sciatique pendant la grossesse?",
-    "options": [
-      "Douleur irradiant dans la jambe, faiblesse musculaire",
-      "Douleur thoracique, essoufflement",
-      "Migraines, nausées",
-      "Crampes abdominales, constipation"
-    ],
-    "answer": "Douleur irradiant dans la jambe, faiblesse musculaire"
-  },
-  {
-    "id": 25,
-    "question": "Quels sont les symptômes de l'ischémie placentaire?",
-    "options": [
-      "Diminution des mouvements fœtaux, retard de croissance intra-utérin",
-      "Vomissements, diarrhée",
-      "Fatigue, insomnie",
-      "Hypertension artérielle, protéines dans les urines"
-    ],
-    "answer": "Diminution des mouvements fœtaux, retard de croissance intra-utérin"
-  },
-  {
-    "id": 26,
-    "question": "Qu'est-ce qui explique l'essoufflement fréquent des femmes enceintes?",
-    "options": [
-      "Diminution de la consommation d'oxygène",
-      "Augmentation de la consommation d'oxygène et diminution des réserves en O2",
-      "Augmentation de l'acidose sanguine",
-      "Diminution du pH sanguin"
-    ],
-    "answer": "Augmentation de la consommation d'oxygène et diminution des réserves en O2"
-  },
-  {
-    "id": 27,
-    "question": "Quels sont les symptômes de la pré-éclampsie?",
-    "options": [
-      "Hypertension, œdèmes, protéinurie",
-      "Anémie, fatigue, vertiges",
-      "Nausées, vomissements, perte de poids",
-      "Essoufflement, palpitations, douleur thoracique"
-    ],
-    "answer": "Hypertension, œdèmes, protéinurie"
-  },
-  {
-    "id": 28,
-    "question": "Quels sont les facteurs de risque de la pré-éclampsie?",
-    "options": [
-      "BMI > 30, antécédents familiaux, grossesse multiple",
-      "Insuffisance rénale, diabète, lupus",
-      "Diabète, hypertension, tabagisme",
-      "Antécédents de fausse couche, âge avancé, anémie"
-    ],
-    "answer": "BMI > 30, antécédents familiaux, grossesse multiple"
-  },
-  {
-    "id": 29,
-    "question": "Quels sont les symptômes courants d'une carence en fer pendant la grossesse?",
-    "options": [
-      "Fatigue, pâleur, essoufflement",
-      "Hypertension, rétention d'eau, maux de tête",
-      "Crampes musculaires, douleurs articulaires, insomnie",
-      "Fièvre, nausées, vomissements"
-    ],
-    "answer": "Fatigue, pâleur, essoufflement"
-  },
-  {
-    "id": 30,
-    "question": "Quels sont les risques de l'hyperémèse gravidique?",
-    "options": [
-      "Hypertension, diabète, thrombose",
-      "Hypoglycémie, insuffisance cardiaque, anémie",
-      "Douleur abdominale, diarrhée, vomissements",
-      "Déshydratation, déséquilibre électrolytique, malnutrition"
-    ],
-    "answer": "Déshydratation, déséquilibre électrolytique, malnutrition"
-  },
-  {
-    "id": 31,
-    "question": "Quel est l'effet d'une alimentation riche en fibres pendant la grossesse?",
-    "options": [
-      "Augmentation des niveaux de glucose",
-      "Augmentation de la pression sanguine",
-      "Perte de poids",
-      "Réduction de la constipation"
-    ],
-    "answer": "Réduction de la constipation"
-  },
-  {
-    "id": 32,
-    "question": "Quels sont les symptômes d'une infection urinaire pendant la grossesse?",
-    "options": [
-      "Constipation, diarrhée, douleurs abdominales",
-      "Fatigue, nausées, vomissements",
-      "Douleur abdominale basse, brûlures à la miction, fièvre",
-      "Pertes vaginales, démangeaisons, douleur"
-    ],
-    "answer": "Douleur abdominale basse, brûlures à la miction, fièvre"
-  },
-  {
-    "id": 33,
-    "question": "Quels sont les risques associés à une césarienne?",
-    "options": [
-      "Diabète, hypertension, œdème",
-      "Infection, hémorragie, thromboembolie",
-      "Perte de poids, anémie, fatigue",
-      "Dépression, insomnie, douleurs articulaires"
-    ],
-    "answer": "Infection, hémorragie, thromboembolie"
-  },
-  {
-    "id": 34,
-    "question": "Quels sont les avantages de l'accouchement vaginal?",
-    "options": [
-      "Récupération plus rapide, moins de risques d'infection",
-      "Diminution des douleurs pendant le travail",
-      "Moins de risque de dépression post-partum",
-      "Moins de stress pour le bébé"
-    ],
-    "answer": "Récupération plus rapide, moins de risques d'infection"
-  },
-  {
-    "id": 35,
-    "question": "Quels sont les signes d'une rupture prématurée des membranes?",
-    "options": [
-      "Essoufflement, fatigue, douleur thoracique",
-      "Écoulement de liquide amniotique, contractions, douleur abdominale",
-      "Hypertension, œdèmes, maux de tête",
-      "Saignements vaginaux, nausées, vomissements"
-    ],
-    "answer": "Écoulement de liquide amniotique, contractions, douleur abdominale"
-  },
-  {
-    "id": 36,
-    "question": "Quels sont les principaux symptômes de la chorioamnionite?",
-    "options": [
-      "Douleur lombaire, contractions prématurées, nausées",
-      "Fatigue, insomnie, céphalées",
-      "Fièvre, tachycardie maternelle, douleur utérine",
-      "Œdème, protéinurie, hyperréflexie"
-    ],
-    "answer": "Fièvre, tachycardie maternelle, douleur utérine"
-  },
-  {
-    "id": 37,
-    "question": "Quel est le rôle de la vitamine D pendant la grossesse?",
-    "options": [
-      "Régulation de la pression sanguine",
-      "Prévention de l'anémie",
-      "Amélioration de la digestion",
-      "Régulation du calcium et développement osseux"
-    ],
-    "answer": "Régulation du calcium et développement osseux"
-  },      
+  ],
+  "answer": "Hémodilution"
+},
+{
+  "id": 30,
+  "question": "Quelle est la conséquence principale de l'augmentation de la masse erythrocytaire pendant la grossesse?",
+  "options": [
+      "Augmentation du transport d'oxygène",
+      "Réduction du retour veineux",
+      "Hyperglycémie",
+      "Hypotension"
+  ],
+  "answer": "Augmentation du transport d'oxygène"
+},
+{
+  "id": 31,
+  "question": "Quelle est la principale cause de la réduction du retour veineux pendant la grossesse?",
+  "options": [
+      "Compression de la veine cave",
+      "Hyperglycémie",
+      "Réduction du débit cardiaque",
+      "Augmentation du volume sanguin"
+  ],
+  "answer": "Compression de la veine cave"
+},
+{
+  "id": 32,
+  "question": "Quel est le principal facteur responsable de l'hypertrophie cardiaque pendant la grossesse?",
+  "options": [
+      "Augmentation du débit cardiaque",
+      "Réduction de la résistance vasculaire",
+      "Compression de la veine cave",
+      "Hyperglycémie"
+  ],
+  "answer": "Augmentation du débit cardiaque"
+},
+{
+  "id": 33,
+  "question": "Qu'est-ce qui caractérise une hypotension artérielle pendant la grossesse?",
+  "options": [
+      "Réduction de la pression artérielle",
+      "Augmentation du volume sanguin",
+      "Hyperglycémie",
+      "Augmentation du débit cardiaque"
+  ],
+  "answer": "Réduction de la pression artérielle"
+},
+{
+  "id": 34,
+  "question": "Quel est le risque principal associé à une thrombopénie sévère?",
+  "options": [
+      "Risque d'hémorragie",
+      "Hyperglycémie",
+      "Réduction du débit cardiaque",
+      "Anémie"
+  ],
+  "answer": "Risque d'hémorragie"
+},
+{
+  "id": 35,
+  "question": "Pourquoi les femmes enceintes peuvent-elles souffrir d'œdèmes?",
+  "options": [
+      "Augmentation du volume plasmatique",
+      "Réduction du retour veineux",
+      "Réduction du débit cardiaque",
+      "Hyperglycémie"
+  ],
+  "answer": "Augmentation du volume plasmatique"
+},
+{
+  "id": 36,
+  "question": "Quelle est la conséquence principale de l'hémodilution chez les femmes enceintes?",
+  "options": [
+      "Anémie physiologique",
+      "Hyperglycémie",
+      "Hypotension",
+      "Réduction du débit cardiaque"
+  ],
+  "answer": "Anémie physiologique"
+},
+{
+  "id": 37,
+  "question": "Qu'est-ce qui caractérise l'hyperleucocytose pendant la grossesse?",
+  "options": [
+      "Augmentation des globules blancs",
+      "Réduction du retour veineux",
+      "Réduction du débit cardiaque",
+      "Hyperglycémie"
+  ],
+  "answer": "Augmentation des globules blancs"
+},
+{
+  "id": 38,
+  "question": "Quel est l'effet principal de la vasodilatation pendant la grossesse?",
+  "options": [
+      "Réduction de la résistance vasculaire",
+      "Augmentation du débit cardiaque",
+      "Augmentation du volume sanguin",
+      "Hyperglycémie"
+  ],
+  "answer": "Réduction de la résistance vasculaire"
+},
+{
+  "id": 39,
+  "question": "Quelle est la principale cause de l'anémie pendant la grossesse?",
+  "options": [
+      "Hémodilution",
+      "Hyperglycémie",
+      "Augmentation du débit cardiaque",
+      "Hypotension"
+  ],
+  "answer": "Hémodilution"
+},
+{
+  "id": 40,
+  "question": "Quel est l'effet de la compression de la veine cave sur le retour veineux?",
+  "options": [
+      "Réduction du retour veineux",
+      "Hyperglycémie",
+      "Réduction du débit cardiaque",
+      "Augmentation du volume sanguin"
+  ],
+  "answer": "Réduction du retour veineux"
+}
+]
       
 ];
 
