@@ -336,8 +336,8 @@ const questionsData = [
   "id": 30,
   "question": "Quelle est la conséquence principale de l'augmentation de la masse erythrocytaire pendant la grossesse?",
   "options": [
-      "Augmentation du transport d'oxygène",
       "Réduction du retour veineux",
+      "Augmentation du transport d'oxygène",
       "Hyperglycémie",
       "Hypotension"
   ],
@@ -369,10 +369,10 @@ const questionsData = [
   "id": 33,
   "question": "Qu'est-ce qui caractérise une hypotension artérielle pendant la grossesse?",
   "options": [
-      "Réduction de la pression artérielle",
+      "Augmentation du débit cardiaque",
       "Augmentation du volume sanguin",
       "Hyperglycémie",
-      "Augmentation du débit cardiaque"
+      "Réduction de la pression artérielle"
   ],
   "answer": "Réduction de la pression artérielle"
 },
@@ -380,8 +380,8 @@ const questionsData = [
   "id": 34,
   "question": "Quel est le risque principal associé à une thrombopénie sévère?",
   "options": [
-      "Risque d'hémorragie",
       "Hyperglycémie",
+      "Risque d'hémorragie",
       "Réduction du débit cardiaque",
       "Anémie"
   ],
