@@ -1,34 +1,413 @@
 import React, { useState, useEffect } from 'react';
 
 const questionsData = [
-   
-        { id: 1, question: "Quel est le principal muscle qui active le processus de respiration?", options: ["Les pectoraux", "Les abdominaux", "Le diaphragme", "Le muscle sternocléidomastoïdien"], answer: "Le diaphragme" },
-        { id: 2, question: "Pendant l'inspiration, que fait le diaphragme?", options: ["Il se contracte et s'élève vers le haut", "Il se relâche et descend vers l'abdomen", "Il se contracte et s'abaisse vers l'abdomen", "Il se relâche et s'élève vers le bas"], answer: "Il se contracte et s'abaisse vers l'abdomen" },
-        { id: 3, question: "Quels organes font partie des voies respiratoires?", options: ["Le cœur et les reins", "Les poumons et le diaphragme", "Le pharynx et le larynx", "L'estomac et l'intestin grêle"], answer: "Le pharynx et le larynx" },
-        { id: 4, question: "Combien de lobes possède le poumon droit?", options: ["2 lobes", "3 lobes", "4 lobes", "5 lobes"], answer: "3 lobes" },
-        { id: 5, question: "Quel est le rôle principal de la respiration?", options: ["Débarrasser l'organisme de l'oxygène", "Apporter du CO2 aux cellules de l'organisme", "Maintenir les paramètres sanguins à un niveau normal", "Favoriser la digestion"], answer: "Maintenir les paramètres sanguins à un niveau normal" },
-        { id: 6, question: "Qu'est-ce que le volume de réserve expiratoire?", options: ["La quantité d'air qui peut être expulsée par une expiration forcée après une expiration normale", "Le volume maximum d'air qu'un individu peut inspirer après une inspiration normale", "La quantité d'air qui reste dans les poumons après une expiration complète", "La quantité d'air expirée pendant une respiration normale"], answer: "La quantité d'air qui peut être expulsée par une expiration forcée après une expiration normale" },
-        { id: 7, question: "Quelle est la fréquence respiratoire normale?", options: ["5 à 10 cycles/min", "12 à 20 cycles/min", "25 à 30 cycles/min", "35 à 40 cycles/min"], answer: "12 à 20 cycles/min" },
-        { id: 8, question: "Qu'est-ce qui cause l'élévation du diaphragme pendant la grossesse?", options: ["Une hypertrophie musculaire", "Une hypervascularisation des muqueuses", "La présence de l'utérus gravide", "Une prise de poids importante"], answer: "La présence de l'utérus gravide" },
-        { id: 9, question: "Quelle modification se produit au niveau du thorax pendant la grossesse?", options: ["Diminution de la circonférence du thorax", "Horizontalisation des côtes", "Diminution du volume pulmonaire", "Augmentation de la pression thoracique"], answer: "Horizontalisation des côtes" },
-        { id: 10, question: "Pendant la grossesse, comment change la consommation d'oxygène?", options: ["Elle diminue de 20 à 40%", "Elle reste stable", "Elle augmente de 20 à 40%", "Elle augmente de 5 à 10%"], answer: "Elle augmente de 20 à 40%" },
-        { id: 11, question: "Qu'est-ce qui augmente pour compenser la demande accrue en oxygène pendant la grossesse?", options: ["Le rythme cardiaque", "La température corporelle", "Le volume respiratoire", "La pression sanguine"], answer: "Le volume respiratoire" },
-        { id: 12, question: "Quelle hormone influence la respiration pendant la grossesse?", options: ["L'adrénaline", "La progestérone", "L'insuline", "L'ocytocine"], answer: "La progestérone" },
-        { id: 13, question: "Comment la ventilation minute change-t-elle pendant la grossesse?", options: ["Elle diminue de 20%", "Elle reste inchangée", "Elle augmente de 40%", "Elle augmente de 60%"], answer: "Elle augmente de 40%" },
-        { id: 14, question: "Quel est le risque associé à l'augmentation de la consommation d'oxygène pendant la grossesse?", options: ["Hypercapnie", "Hypoxémie", "Hypocapnie", "Hyperoxie"], answer: "Hypoxémie" },
-        { id: 15, question: "Quel est l'effet de la progestérone sur le centre respiratoire du cerveau pendant la grossesse?", options: ["Augmente les niveaux de CO2 dans le sang", "Diminue les niveaux de CO2 dans le sang", "Diminue le volume courant", "Réduit la ventilation alvéolaire"], answer: "Diminue les niveaux de CO2 dans le sang" },
-        { id: 16, question: "Quel est le résultat de l'hyperventilation causée par la progestérone pendant la grossesse?", options: ["Une acidose respiratoire", "Une hypocapnie", "Une hypercapnie", "Une hyperoxie"], answer: "Une hypocapnie" },
-        { id: 17, question: "Quel trouble de l'équilibre acido-basique peut survenir pendant la grossesse?", options: ["Une acidose métabolique", "Une alcalose respiratoire", "Une acidose respiratoire", "Une alcalose métabolique"], answer: "Une alcalose respiratoire" },
-        { id: 18, question: "Quelle est la cause de l'essoufflement fréquent chez les femmes enceintes?", options: ["Hypercapnie", "Hypoxémie", "Augmentation de la consommation d'oxygène", "Accumulation de dioxyde de carbone"], answer: "Augmentation de la consommation d'oxygène" },
-        { id: 19, question: "Quels sont les volumes respiratoires non mobilisables?", options: ["Le volume de réserve expiratoire", "Le volume de réserve inspiratoire", "Le volume résiduel", "Le volume courant"], answer: "Le volume résiduel" },
-        { id: 20, question: "Comment les voies aériennes sont-elles affectées par la grossesse?", options: ["Diminution de la vascularisation des muqueuses", "Hypertrophie des muqueuses", "Réduction de la taille des fosses nasales", "Augmentation de la rigidité des bronches"], answer: "Hypertrophie des muqueuses" },
-        { id: 21, question: "Quelles sont les modifications du système respiratoire observées au début de la grossesse?", options: ["La femme respire plus fréquemment mais moins profondément", "La femme respire plus profondément mais pas plus fréquemment", "La femme respire moins fréquemment et moins profondément", "La femme ne subit pas de changement respiratoire"], answer: "La femme respire plus profondément mais pas plus fréquemment" },
-        { id: 22, question: "Quelle est la conséquence de l'augmentation du volume courant pendant la grossesse?", options: ["Diminution de la ventilation minute", "Augmentation du volume de réserve expiratoire", "Diminution du volume de réserve expiratoire", "Stabilisation du volume courant"], answer: "Diminution du volume de réserve expiratoire" },
-        { id: 23, question: "Quelle est la conséquence de l'action de la progestérone sur la respiration pendant la grossesse?", options: ["Accumulation de CO2", "Hypercapnie", "Légère alcalose respiratoire", "Légère acidose respiratoire"], answer: "Légère alcalose respiratoire" },
-        { id: 24, question: "Comment la ventilation alvéolaire change-t-elle sous l'effet de la progestérone?", options: ["Elle diminue", "Elle augmente", "Elle reste stable", "Elle fluctue fortement"], answer: "Elle augmente" },
-        { id: 25, question: "Quelles sont les adaptations physiologiques observées dans les voies aériennes pendant la grossesse?", options: ["Hypervascularisation des muqueuses", "Réduction de la surface des fosses nasales", "Diminution du volume des bronches", "Augmentation de la rigidité des voies respiratoires"], answer: "Hypervascularisation des muqueuses" },
-        { id: 26, question: "Qu'est-ce qui explique l'essoufflement fréquent des femmes enceintes?", options: ["Augmentation de l'acidose sanguine", "Diminution du pH sanguin", "Augmentation de la consommation d'oxygène et diminution des réserves en O2", "Diminution de la consommation d'oxygène"], answer: "Augmentation de la consommation d'oxygène et diminution des réserves en O2" },
-       
+  {
+    "id": 1,
+    "question": "Quelle est la principale fonction des reins?",
+    "options": [
+      "Filtrer le sang",
+      "Combattre les infections",
+      "Produire des globules rouges",
+      "Éliminer les déchets liquides du corps"
+    ],
+    "answer": "Filtrer le sang"
+  },
+  {
+    "id": 2,
+    "question": "Qu'est-ce que la thrombopénie?",
+    "options": [
+      "Augmentation du nombre de globules blancs",
+      "Diminution du nombre de plaquettes",
+      "Diminution du volume sanguin",
+      "Épaississement du sang"
+    ],
+    "answer": "Diminution du nombre de plaquettes"
+  },
+  {
+    "id": 3,
+    "question": "Quels sont les risques associés à une thrombopénie sévère pendant la grossesse?",
+    "options": [
+      "Insuffisance rénale",
+      "Augmentation de la pression artérielle",
+      "Risque hémorragique",
+      "Diabète gestationnel"
+    ],
+    "answer": "Risque hémorragique"
+  },
+  {
+    "id": 4,
+    "question": "Quel est le rôle des plaquettes dans la coagulation?",
+    "options": [
+      "Transport de l'oxygène",
+      "Formation du clou plaquettaire",
+      "Production d'anticorps",
+      "Filtration des déchets"
+    ],
+    "answer": "Formation du clou plaquettaire"
+  },
+  {
+    "id": 5,
+    "question": "Qu'est-ce que l'hémostase primaire?",
+    "options": [
+      "La formation du clou plaquettaire",
+      "La filtration des reins",
+      "La production de globules rouges",
+      "La respiration cellulaire"
+    ],
+    "answer": "La formation du clou plaquettaire"
+  },
+  {
+    "id": 6,
+    "question": "Quelle protéine est responsable de la formation du caillot de fibrine?",
+    "options": [
+      "La myoglobine",
+      "L'albumine",
+      "La fibrinogène",
+      "L'hémoglobine"
+    ],
+    "answer": "La fibrinogène"
+  },
+  {
+    "id": 7,
+    "question": "Quand survient généralement la thrombopénie physiologique pendant la grossesse?",
+    "options": [
+      "Au troisième trimestre",
+      "Après l'accouchement",
+      "Au premier trimestre",
+      "Au deuxième trimestre"
+    ],
+    "answer": "Au troisième trimestre"
+  },
+  {
+    "id": 8,
+    "question": "Quels facteurs augmentent pendant la grossesse pour préparer l'accouchement?",
+    "options": [
+      "Les niveaux de glucose",
+      "Les globules blancs",
+      "Les facteurs de coagulation",
+      "Les niveaux de calcium"
+    ],
+    "answer": "Les facteurs de coagulation"
+  },
+  {
+    "id": 9,
+    "question": "Quelle est la conséquence principale de l'activation des plaquettes?",
+    "options": [
+      "Formation du clou plaquettaire",
+      "Destruction des globules rouges",
+      "Filtration des déchets par les reins",
+      "Production d'anticorps"
+    ],
+    "answer": "Formation du clou plaquettaire"
+  },
+  {
+    "id": 10,
+    "question": "Quel est le principal risque associé à une hypofibrinolyse pendant la grossesse?",
+    "options": [
+      "Thrombose",
+      "Diabète",
+      "Anémie",
+      "Hypertension"
+    ],
+    "answer": "Thrombose"
+  },
+  {
+    "id": 11,
+    "question": "Quelle est la principale cause de l'hypercoagulabilité physiologique pendant la grossesse?",
+    "options": [
+      "Changements hormonaux",
+      "Augmentation des facteurs de coagulation",
+      "Élévation de la température corporelle",
+      "Diminution des plaquettes"
+    ],
+    "answer": "Augmentation des facteurs de coagulation"
+  },
+  {
+    "id": 12,
+    "question": "Quel est le rôle des D-dimères dans la coagulation?",
+    "options": [
+      "Indicateur de formation d'un caillot",
+      "Réduction des niveaux de glucose",
+      "Régulation de la température",
+      "Transport de l'oxygène"
+    ],
+    "answer": "Indicateur de formation d'un caillot"
+  },
+  {
+    "id": 13,
+    "question": "Quels changements hormonaux influencent l'hyperlaxité articulaire pendant la grossesse?",
+    "options": [
+      "L'adrénaline et la noradrénaline",
+      "La relaxine et les oestrogènes",
+      "L'insuline et le glucagon",
+      "La thyroxine et la calcitonine"
+    ],
+    "answer": "La relaxine et les oestrogènes"
+  },
+  {
+    "id": 14,
+    "question": "Quels sont les principaux risques de la coagulation excessive pendant la grossesse?",
+    "options": [
+      "Thrombose et embolie pulmonaire",
+      "Diabète et hypertension",
+      "Anémie et malnutrition",
+      "Insuffisance rénale"
+    ],
+    "answer": "Thrombose et embolie pulmonaire"
+  },
+  {
+    "id": 15,
+    "question": "Quelle est la cause principale de l'hypercoagulabilité pendant la grossesse?",
+    "options": [
+      "Augmentation de la pression sanguine",
+      "Augmentation des facteurs de coagulation",
+      "Changements dans le métabolisme du glucose",
+      "Diminution des globules rouges"
+    ],
+    "answer": "Augmentation des facteurs de coagulation"
+  },
+  {
+    "id": 16,
+    "question": "Quel est l'effet de la fibrinolyse sur un caillot de fibrine?",
+    "options": [
+      "Dissolution du caillot",
+      "Renforcement du caillot",
+      "Création d'un nouveau caillot",
+      "Augmentation du volume sanguin"
+    ],
+    "answer": "Dissolution du caillot"
+  },
+  {
+    "id": 17,
+    "question": "Quels sont les symptômes courants du syndrome du canal carpien pendant la grossesse?",
+    "options": [
+      "Engourdissement et fourmillements dans les doigts",
+      "Essoufflement",
+      "Douleur au dos",
+      "Crampes dans les jambes"
+    ],
+    "answer": "Engourdissement et fourmillements dans les doigts"
+  },
+  {
+    "id": 18,
+    "question": "Quels sont les facteurs de risque de l'hypercoagulabilité pendant la grossesse?",
+    "options": [
+      "BMI > 30, tabagisme, antécédents de TVP",
+      "Hypertension, diabète, varices",
+      "Diminution de l'activité physique, stress, sédentarité",
+      "Anémie, manque de sommeil, carence en vitamine D"
+    ],
+    "answer": "BMI > 30, tabagisme, antécédents de TVP"
+  },
+  {
+    "id": 19,
+    "question": "Quelles sont les conséquences mécaniques des modifications du système locomoteur pendant la grossesse?",
+    "options": [
+      "Lombalgies, pubalgies, crampes des mollets",
+      "Perte d'appétit, nausées, vomissements",
+      "Hypertension, diabète, thrombose",
+      "Insomnie, somnolence, fatigue"
+    ],
+    "answer": "Lombalgies, pubalgies, crampes des mollets"
+  },
+  {
+    "id": 20,
+    "question": "Quelles sont les recommandations pour prévenir les complications liées à la thrombopénie pendant la grossesse?",
+    "options": [
+      "Prise de vitamines",
+      "Surveillance régulière des plaquettes",
+      "Augmentation de la consommation de fer",
+      "Repos au lit"
+    ],
+    "answer": "Surveillance régulière des plaquettes"
+  },
+  {
+    "id": 21,
+    "question": "Quelles sont les modifications des glandes sudoripares pendant la grossesse?",
+    "options": [
+      "Augmentation de la transpiration",
+      "Réduction de la production de sueur",
+      "Aucun changement",
+      "Changement de la composition de la sueur"
+    ],
+    "answer": "Augmentation de la transpiration"
+  },
+  {
+    "id": 22,
+    "question": "Quel est l'effet des vomissements fréquents sur les dents pendant la grossesse?",
+    "options": [
+      "Érosion dentaire due à l'acidité",
+      "Augmentation de la production de salive",
+      "Raffermissement des dents",
+      "Réduction de l'acidité buccale"
+    ],
+    "answer": "Érosion dentaire due à l'acidité"
+  },
+  {
+    "id": 23,
+    "question": "Quel est le principal symptôme d'une mycose vaginale pendant la grossesse?",
+    "options": [
+      "Douleur abdominale",
+      "Saignements vaginaux",
+      "Pertes vaginales blanches et épaisses",
+      "Fièvre"
+    ],
+    "answer": "Pertes vaginales blanches et épaisses"
+  },
+  {
+    "id": 24,
+    "question": "Quels sont les principaux symptômes de la sciatique pendant la grossesse?",
+    "options": [
+      "Douleur irradiant dans la jambe, faiblesse musculaire",
+      "Douleur thoracique, essoufflement",
+      "Migraines, nausées",
+      "Crampes abdominales, constipation"
+    ],
+    "answer": "Douleur irradiant dans la jambe, faiblesse musculaire"
+  },
+  {
+    "id": 25,
+    "question": "Quels sont les symptômes de l'ischémie placentaire?",
+    "options": [
+      "Diminution des mouvements fœtaux, retard de croissance intra-utérin",
+      "Vomissements, diarrhée",
+      "Fatigue, insomnie",
+      "Hypertension artérielle, protéines dans les urines"
+    ],
+    "answer": "Diminution des mouvements fœtaux, retard de croissance intra-utérin"
+  },
+  {
+    "id": 26,
+    "question": "Qu'est-ce qui explique l'essoufflement fréquent des femmes enceintes?",
+    "options": [
+      "Diminution de la consommation d'oxygène",
+      "Augmentation de la consommation d'oxygène et diminution des réserves en O2",
+      "Augmentation de l'acidose sanguine",
+      "Diminution du pH sanguin"
+    ],
+    "answer": "Augmentation de la consommation d'oxygène et diminution des réserves en O2"
+  },
+  {
+    "id": 27,
+    "question": "Quels sont les symptômes de la pré-éclampsie?",
+    "options": [
+      "Hypertension, œdèmes, protéinurie",
+      "Anémie, fatigue, vertiges",
+      "Nausées, vomissements, perte de poids",
+      "Essoufflement, palpitations, douleur thoracique"
+    ],
+    "answer": "Hypertension, œdèmes, protéinurie"
+  },
+  {
+    "id": 28,
+    "question": "Quels sont les facteurs de risque de la pré-éclampsie?",
+    "options": [
+      "BMI > 30, antécédents familiaux, grossesse multiple",
+      "Insuffisance rénale, diabète, lupus",
+      "Diabète, hypertension, tabagisme",
+      "Antécédents de fausse couche, âge avancé, anémie"
+    ],
+    "answer": "BMI > 30, antécédents familiaux, grossesse multiple"
+  },
+  {
+    "id": 29,
+    "question": "Quels sont les symptômes courants d'une carence en fer pendant la grossesse?",
+    "options": [
+      "Fatigue, pâleur, essoufflement",
+      "Hypertension, rétention d'eau, maux de tête",
+      "Crampes musculaires, douleurs articulaires, insomnie",
+      "Fièvre, nausées, vomissements"
+    ],
+    "answer": "Fatigue, pâleur, essoufflement"
+  },
+  {
+    "id": 30,
+    "question": "Quels sont les risques de l'hyperémèse gravidique?",
+    "options": [
+      "Hypertension, diabète, thrombose",
+      "Hypoglycémie, insuffisance cardiaque, anémie",
+      "Douleur abdominale, diarrhée, vomissements",
+      "Déshydratation, déséquilibre électrolytique, malnutrition"
+    ],
+    "answer": "Déshydratation, déséquilibre électrolytique, malnutrition"
+  },
+  {
+    "id": 31,
+    "question": "Quel est l'effet d'une alimentation riche en fibres pendant la grossesse?",
+    "options": [
+      "Augmentation des niveaux de glucose",
+      "Augmentation de la pression sanguine",
+      "Perte de poids",
+      "Réduction de la constipation"
+    ],
+    "answer": "Réduction de la constipation"
+  },
+  {
+    "id": 32,
+    "question": "Quels sont les symptômes d'une infection urinaire pendant la grossesse?",
+    "options": [
+      "Constipation, diarrhée, douleurs abdominales",
+      "Fatigue, nausées, vomissements",
+      "Douleur abdominale basse, brûlures à la miction, fièvre",
+      "Pertes vaginales, démangeaisons, douleur"
+    ],
+    "answer": "Douleur abdominale basse, brûlures à la miction, fièvre"
+  },
+  {
+    "id": 33,
+    "question": "Quels sont les risques associés à une césarienne?",
+    "options": [
+      "Diabète, hypertension, œdème",
+      "Infection, hémorragie, thromboembolie",
+      "Perte de poids, anémie, fatigue",
+      "Dépression, insomnie, douleurs articulaires"
+    ],
+    "answer": "Infection, hémorragie, thromboembolie"
+  },
+  {
+    "id": 34,
+    "question": "Quels sont les avantages de l'accouchement vaginal?",
+    "options": [
+      "Récupération plus rapide, moins de risques d'infection",
+      "Diminution des douleurs pendant le travail",
+      "Moins de risque de dépression post-partum",
+      "Moins de stress pour le bébé"
+    ],
+    "answer": "Récupération plus rapide, moins de risques d'infection"
+  },
+  {
+    "id": 35,
+    "question": "Quels sont les signes d'une rupture prématurée des membranes?",
+    "options": [
+      "Essoufflement, fatigue, douleur thoracique",
+      "Écoulement de liquide amniotique, contractions, douleur abdominale",
+      "Hypertension, œdèmes, maux de tête",
+      "Saignements vaginaux, nausées, vomissements"
+    ],
+    "answer": "Écoulement de liquide amniotique, contractions, douleur abdominale"
+  },
+  {
+    "id": 36,
+    "question": "Quels sont les principaux symptômes de la chorioamnionite?",
+    "options": [
+      "Douleur lombaire, contractions prématurées, nausées",
+      "Fatigue, insomnie, céphalées",
+      "Fièvre, tachycardie maternelle, douleur utérine",
+      "Œdème, protéinurie, hyperréflexie"
+    ],
+    "answer": "Fièvre, tachycardie maternelle, douleur utérine"
+  },
+  {
+    "id": 37,
+    "question": "Quel est le rôle de la vitamine D pendant la grossesse?",
+    "options": [
+      "Régulation de la pression sanguine",
+      "Prévention de l'anémie",
+      "Amélioration de la digestion",
+      "Régulation du calcium et développement osseux"
+    ],
+    "answer": "Régulation du calcium et développement osseux"
+  },      
       
 ];
 
